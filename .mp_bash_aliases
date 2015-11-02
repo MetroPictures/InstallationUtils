@@ -2,6 +2,8 @@
 
 # METROPICTURES
 SUBNET=192.168.0
+PATH_TO_INSTALLATION_UTILS=""	#set me!
+
 
 # Controller
 alias metropictures.startup="python controller.py startup"
@@ -11,47 +13,47 @@ alias metropictures.shutdown="python controller.py shutdown"
 # Splendid Isolation
 export SI_ADDR=$SUBNET.200
 SI_B_PORT=8080
-alias metropictures.splendidisolation="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$SI_ADDR -L $SI_B_PORT:localhost:8080"
+alias metropictures.splendidisolation="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$SI_ADDR -L $SI_B_PORT:localhost:8080"
 
 # Is He Cheating?
 export IHC_ADDR=$SUBNET.204
 IHC_B_PORT=8084
-alias metropictures.ishecheating="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$IHC_ADDR -L $IHC_B_PORT:localhost:8080"
+alias metropictures.ishecheating="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$IHC_ADDR -L $IHC_B_PORT:localhost:8080"
 
 # Skypesnail
 export SS_ADDR=$SUBNET.202
 SS_B_PORT=8082
-alias metropictures.skypesnail="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$SS_ADDR -L $SS_B_PORT:localhost:8080"
+alias metropictures.skypesnail="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$SS_ADDR -L $SS_B_PORT:localhost:8080"
 
 # Enough is Enough
 export EIE_ADDR=$SUBNET.201
 EIE_PORT=8081
-alias metropictures.enoughisenough="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$EIE_ADDR -L $EIE_PORT:localhost:8080"
+alias metropictures.enoughisenough="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$EIE_ADDR -L $EIE_PORT:localhost:8080"
 
 # Guilt Tripping
 export GT_ADDR=$SUBNET.205
 GT_PORT=8085
-alias metropictures.guilttripping="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$GT_ADDR -L $GT_PORT:localhost:8080"
+alias metropictures.guilttripping="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$GT_ADDR -L $GT_PORT:localhost:8080"
 
 # Maso Meet Maso
 export MMM_ADDR=$SUBNET.206
 MMM_PORT=8086
-alias metropictures.masomeetmaso="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$MMM_ADDR -L $MMM_PORT:localhost:8080"
+alias metropictures.masomeetmaso="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$MMM_ADDR -L $MMM_PORT:localhost:8080"
 
 # Bad Dad & Beyond
 export BDAB_ADDR=$SUBNET.207
 BDAB_PORT=8087
-alias metropictures.baddad="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$BDAB_ADDR -L $BDAB_PORT:localhost:8080"
+alias metropictures.baddad="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$BDAB_ADDR -L $BDAB_PORT:localhost:8080"
 
 # Dawg Shaming
 export DS_ADDR=$SUBNET.208
 DS_PORT=8088
-alias metropictures.dawgshaming="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$DS_ADDR -L $DS_PORT:localhost:8080"
+alias metropictures.dawgshaming="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$DS_ADDR -L $DS_PORT:localhost:8080"
 
 # Ded Moroz
 export DM_ADDR=$SUBNET.209
 DM_PORT=8089
-alias metropictures.dedmoroz="ssh -i /Users/video_clash/Documents/proj/MetroPictures/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$DM_ADDR -L $DM_PORT:localhost:8080"
+alias metropictures.dedmoroz="ssh -i $PATH_TO_INSTALLATION_UTILS/InstallationUtils/metropictures -o PubkeyAuthentication=yes -o IdentitiesOnly=yes-o PubkeyAuthentication=no pi@$DM_ADDR -L $DM_PORT:localhost:8080"
 
 
 
