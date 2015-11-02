@@ -4,11 +4,9 @@
 SUBNET=192.168.0
 PATH_TO_INSTALLATION_UTILS=""	#set me!
 
-
 # Controller
 alias metropictures.startup="python controller.py startup"
 alias metropictures.shutdown="python controller.py shutdown"
-
 
 # Splendid Isolation
 export SI_ADDR=$SUBNET.200
