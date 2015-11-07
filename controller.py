@@ -2,8 +2,7 @@ import os
 from time import sleep
 from sys import argv, exit
 
-SUBNET = "192.168.0.%d"
-IDENTITY_FILE = os.path.join(os.getcwd(), "metropictures")
+IDENTITY_FILE = os.path.join(os.getenv('PATH_TO_INSTALLATION_UTILS'), "metropictures")
 PI = [
 	{
 		'homedir' : 'SplendidIsolation',
@@ -79,8 +78,8 @@ def run_cmd(cmd, pi=None):
 			return False
 
 	for p in pi:
-		c = "ssh -f -i %s -o PubkeyAuthentication=yes -o IdentitiesOnly=yes pi@%s 'cd ~/%s && python %s.py --%s'" \
-			% (IDENTITY_FILE, (SUBNET % p['addr']), p['homedir'], p['module'], cmd)
+		c = "ssh -f -i %s -o PubkeyAuthentication=yes -o IdentitiesOnly=yes pi@%s.%d 'cd ~/%s && python %s.py --%s'" \
+			% (IDENTITY_FILE, (os.getenv('METROPICTURES_SUBNET'), p['addr']), p['homedir'], p['module'], cmd)
 
 		os.system(c)
 		sleep(3)
@@ -88,7 +87,7 @@ def run_cmd(cmd, pi=None):
 	return True
 
 if __name__ == "__main__":
-	usage = "python controller.py startup|shutdown [name]"
+	usage = "python controller.py startup|shutdown|restart [name]"
 	
 	res = False
 	p = None if len(argv) != 3 else argv[2]
@@ -97,6 +96,8 @@ if __name__ == "__main__":
 		res = startup(p)
 	elif argv[1] == "shutdown":
 		res = shutdown(p)
+	elif argv[1] == "restart":
+		res = restart(p)
 	else:
 		print usage
 
