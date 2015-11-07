@@ -2,7 +2,7 @@
 
 # METROPICTURES
 export METROPICTURES_SUBNET=192.168.0
-export PATH_TO_INSTALLATION_UTILS=""	#set me!
+export PATH_TO_INSTALLATION_UTILS="$PROJ/MetroPictures/InstallationUtils"	#set me!
 
 # Controller
 alias metropictures.startup="python $PATH_TO_INSTALLATION_UTILS/controller.py startup"

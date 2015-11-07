@@ -79,7 +79,7 @@ def run_cmd(cmd, pi=None):
 
 	for p in pi:
 		c = "ssh -f -i %s -o PubkeyAuthentication=yes -o IdentitiesOnly=yes pi@%s.%d 'cd ~/%s && python %s.py --%s'" \
-			% (IDENTITY_FILE, (os.getenv('METROPICTURES_SUBNET'), p['addr']), p['homedir'], p['module'], cmd)
+			% (IDENTITY_FILE, os.getenv('METROPICTURES_SUBNET'), p['addr'], p['homedir'], p['module'], cmd)
 
 		os.system(c)
 		sleep(3)
